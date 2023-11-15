@@ -155,7 +155,37 @@ In essence, the event loop ensures that JavaScript remains responsive by handlin
                     </div>
               </div>
 
-            </li>
+</li>
+<li class="my-4">
+    <span class="bg-orange-200 px-2 text-lg rounded">Question 4:</span>
+        <span class="mt-5 mb-2 text-lg  font-medium text-gray-700">What does quizTimer do?</span><br>
+            <div class="mt-5"><br>
+              <span class="bg-orange-200 px-2 text-lg rounded">Answer:</span>
+                <div class="mt-5 mb-2 text-base capitalize font-medium text-gray-700">
+                    The `quizTimer` function appears to be a countdown timer for a quiz. Let's break down its functionality:<br>
+                    <br>
+1. Function Signature:<br>
+   - `const quizTimer = (dismiss) => {...}`<br>
+   - This function takes a single argument `dismiss` which is a boolean value indicating whether to dismiss the timer.<br>
+   <br>
+2. Timer Handling:<br>
+   - If `dismiss` is `true`, it clears the timer interval using `clearInterval(timer)`. This means it stops the timer if `dismiss` is `true`.<br>
+   - If `dismiss` is not `true`, it sets up a new timer using `setInterval`.<br>
+   <br>
+3. Timer Functionality:<br>
+   - Inside the `setInterval` function, the code updates the timer display every second (`1000` milliseconds).<br>
+   - It calculates the minutes and seconds from the `count` variable.<br>
+   - Updates the HTML content of an element with the ID `count` to display the countdown time in the format `mm:ss`.<br>
+   - Increments the `count` variable every second to keep track of the elapsed time.<br>
+   <br>
+4. Styling Changes:<br>
+   - Additionally, if the `count` exceeds 60 seconds, it alternates the text color between red shades (`text-red-300` and `text-red-700`) every 2 seconds.<br>
+   <br>
+In summary, `quizTimer` is a function that manages a countdown timer. It sets up an interval that updates the displayed timer on the webpage every second and handles styling changes when the timer exceeds 60 seconds. If called with `dismiss` set to `true`, it stops the timer.<br>
+                    <br>
+                </div>
+            </div>
+</li>
             
           </ul>
     </section>
