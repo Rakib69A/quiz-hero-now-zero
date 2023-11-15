@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                common: ["Rubik", "sans-serif"],
+              },
+            },
+          },
+        };
+      </script>
+</head>
+<body>
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+          <div class="text-zinc-800 font-bold uppercase">
+            <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+            <p class="text-[10px] font-normal capitalize -mt-1">
+              Get ready to Quiz and be amazed!
+            </p>
+          </div>
+          <button
+            class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white" id="blog"
+          >
+            <a href="index.html">Back</a>
+          </button>
+        </nav>
+      </header>
+    <section>
+        <ul class="text-sm my-10 mx-48">
+            <li class="my-4">
+              <span class="bg-orange-200 px-2 text-lg rounded">Question 1:</span>
+              <span class="mt-5 mb-2 text-lg capitalize font-medium text-gray-700">differences between map, filter, forEach, and find in JavaScript?</span>
+              <div class="mt-5">
+                  <span class="bg-orange-200 px-2 text-lg rounded">Answer:</span>
+                  <div class="mt-5 mb-2 text-base capitalize font-medium text-gray-700">Certainly! Here's an overview of the differences between `map`, `filter`, `forEach`, and `find` in JavaScript:<br>
+                    1. map:<br>
+                       - `map` creates a new array by applying a provided function to each element of the array it's called on.<br>
+                       - It returns a new array with the results of calling the provided function on every element in the original array.<br>
+                       - It doesn't modify the original array.<br>
+                       - Example:<br>
+                         ```javascript<br>
+                         const numbers = [1, 2, 3, 4, 5];<br>
+                         const squaredNumbers = numbers.map((num) => num * num); // [1, 4, 9, 16, 25]<br>
+                         ```<br>
+                    
+                    2. filter:<br>
+                       - `filter` creates a new array with elements that pass a certain condition.<br>
+                       - It returns a new array containing only the elements for which the provided function returns `true`.<br>
+                       - It doesn't modify the original array.<br>
+                       - Example:<br>
+                         ```javascript<br>
+                         const numbers = [10, 15, 20, 25, 30];<br>
+                         const divisibleByFive = numbers.filter((num) => num % 5 === 0); // [10, 15, 20, 25, 30]<br>
+                         ```<br>
+                    
+                    3. forEach:<br>
+                       - `forEach` iterates over elements in an array and executes a provided function for each element.<br>
+                       - It doesn't return anything (returns `undefined`) and is used for its side effects (like logging, modifying variables outside the loop, etc.).<br>
+                       - It doesn't create a new array; it simply iterates over each element.<br>
+                       - Example:<br>
+                         ```javascript<br>
+                         const numbers = [1, 2, 3];<br>
+                         numbers.forEach((num) => console.log(num)); // Logs: 1, 2, 3<br>
+                         ```<br>
+                    
+                    4. find:<br>
+                       - `find` returns the first element in an array that satisfies a provided testing function.<br>
+                       - It returns `undefined` if no element satisfies the condition.<br>
+                       - It doesn't modify the original array.<br>
+                       - Example:<br>
+                         ```javascript<br>
+                         const numbers = [10, 20, 30, 40, 50];<br>
+                         const found = numbers.find((num) => num > 25); // 30<br>
+                         ```<br>
+                    
+                    In summary, `map` transforms each element of an array and returns a new array, `filter` creates a new array with elements that meet a certain condition, `forEach` iterates over elements for side effects without creating a new array, and `find` retrieves the first element in an array that satisfies a provided condition.<br></div>
+                </div>
+
+            </li>
+            <li class="my-4">
+              <span class="bg-orange-200 px-2 text-lg rounded">Question 2:</span>
+              <span class="mt-5 mb-2 text-lg capitalize font-medium text-gray-700">Difference between localStorage, sessionStorage and cookies in JavaScript?</span>
+              <div class="mt-5">
+                  <span class="bg-orange-200 px-2 text-lg rounded">Answer:</span>
+                    <div class="mt-5 mb-2 text-base capitalize font-medium text-gray-700">
+1. localStorage:<br>
+   - Scope: Data stored in `localStorage` persists even after the browser is closed and reopened. It has no expiration time unless manually cleared.<br>
+   - Storage Limit: The data limit is significantly larger compared to cookies, usually around 5-10MB per domain.<br>
+   - Accessibility: Data stored in `localStorage` is accessible across windows/tabs of the same origin.<br>
+   - Usage: It's commonly used for storing application state, preferences, or cached data.<br>
+   <br>
+2. sessionStorage:<br>
+   - Scope: Data stored in `sessionStorage` is available only for the duration of the page session. It gets cleared when the tab or window is closed.<br>
+   - Storage Limit: Similar to `localStorage` but separate for each tab/window. Usually around 5-10MB per domain per tab/window.<br>
+   - Accessibility: Data stored in `sessionStorage` is not shared between tabs/windows; each tab/window has its own storage area.<br>
+   - Usage: It's suitable for temporarily storing data needed for the current session, like user authentication tokens during a browsing session.<br>
+   <br>
+3. Cookies:<br>
+   - Scope: Cookies are primarily used for client-side data storage and have expiration times that can be set. They can persist even after the browser is closed if their expiration is set for a future date.<br>
+   - Storage Limit: Limited to about 4KB of data per cookie.<br>
+   - Accessibility: Cookies are sent with every HTTP request to the associated domain, including requests for images, CSS files, etc. They can also be accessed by both server-side and client-side scripts.<br>
+   - Usage: Often used for maintaining user sessions, storing user preferences, and tracking user behavior across different visits to a website.<br>
+
+In summary, `localStorage` and `sessionStorage` provide larger storage space and are more suited for client-side data storage while maintaining scope within the browser session or persisting beyond it, whereas cookies are primarily used for smaller amounts of data and can be sent to the server with every HTTP request.<br>
+                    </div>
+              </div>
+
+            </li>
+<li class="my-4">
+              <span class="bg-orange-200 px-2 text-lg rounded">Question 3:</span>
+              <span class="mt-5 mb-2 text-lg  font-medium text-gray-700">What is event loop ? How does it work?</span>
+              <div class="mt-5">
+                  <span class="bg-orange-200 px-2 text-lg rounded">Answer:</span>
+                    <div class="mt-5 mb-2 text-base capitalize font-medium text-gray-700">
+                        The event loop is a crucial concept in JavaScript that handles asynchronous operations and manages the execution of code. It's part of the JavaScript runtime environment, responsible for handling tasks like callbacks, promises, and handling events.
+
+Here's an overview of how the event loop works:
+<br>
+1. Execution Context:<br>
+   - When JavaScript code runs, it operates within an execution context. This context includes the global context and function contexts created during code execution.<br>
+   <br>
+2. Synchronous and Asynchronous Tasks:<br>
+   - JavaScript is a single-threaded language, meaning it can only execute one piece of code at a time. However, it can handle asynchronous operations efficiently using mechanisms like callbacks, promises, and async/await.<br>
+   - Synchronous tasks execute in the order they appear in the code.<br>
+   - Asynchronous tasks, like fetching data from a server or waiting for a timer, are handled separately from the main execution thread.<br>
+
+3. Event Loop:<br>
+   - The event loop is the mechanism that allows JavaScript to perform non-blocking I/O operations.<br>
+   - It continuously checks the call stack for tasks to execute.<br>
+   - When the call stack is empty (i.e., all synchronous tasks have been executed), the event loop checks the task queue for pending asynchronous tasks.<br>
+
+4. Task Queue:<br>
+   - Asynchronous tasks, upon completion, are placed in the task queue.<br>
+   - These tasks might include callbacks from `setTimeout`, `fetch` requests, promise resolutions, etc.<br>
+   - The event loop checks the task queue and moves tasks to the call stack for execution when the call stack is empty.<br>
+
+5. Event-Driven Architecture:<br>
+   - JavaScript operates in an event-driven manner. Events triggered by user actions (like clicks, input, etc.) or by other parts of the code are placed in the event queue.<br>
+   - The event loop processes these events and their associated callbacks when the call stack is clear.<br>
+
+6. Execution Order:<br>
+   - Synchronous tasks are executed immediately in the call stack.<br>
+   - Asynchronous tasks are placed in the task queue and executed only when the call stack is empty.<br>
+   - Events from the event queue are processed similarly, when the call stack is clear.<br>
+
+In essence, the event loop ensures that JavaScript remains responsive by handling asynchronous tasks and events without blocking the main execution thread. It allows for the execution of tasks in an ordered manner, even when some tasks take longer to complete or are reliant on external operations.<br>
+                    </div>
+              </div>
+
+            </li>
+            
+          </ul>
+    </section>
+
+</body>
+</html>
